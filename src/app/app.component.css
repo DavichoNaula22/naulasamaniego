@@ -1,0 +1,70 @@
+/* Header Container */
+.header-container {
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .header-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Store Title */
+  .store-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Store Description */
+  .store-description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  /* CTA Button */
+  .cta-button {
+    display: inline-block;
+    background-color: #ffdd57;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #ffcc00;
+    color: #000;
+    transform: scale(1.05);
+  }
+  
+  /* Main Section with Router Outlet */
+  .main-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Router Outlet Placeholder */
+  router-outlet + * {
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  

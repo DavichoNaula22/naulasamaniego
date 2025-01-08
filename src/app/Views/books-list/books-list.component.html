@@ -1,0 +1,15 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-xs="12" size-sm="6" size-md="4" size-lg="3" *ngFor="let product of products">
+        <app-book-item [item]="product"></app-book-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="openAddProductModal()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

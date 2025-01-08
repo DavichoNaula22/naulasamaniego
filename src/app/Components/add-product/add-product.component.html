@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Añadir Producto</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="dismiss()">Cerrar</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+      <ion-item>
+        <ion-label position="floating">Título</ion-label>
+        <ion-input formControlName="title" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Precio</ion-label>
+        <ion-input formControlName="price" type="number"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Descripción</ion-label>
+        <ion-textarea formControlName="description"></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Stock</ion-label>
+        <ion-input formControlName="stock" type="number"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Categoría</ion-label>
+        <ion-select formControlName="category">
+          <ion-select-option value="Proteínas">Proteínas</ion-select-option>
+          <ion-select-option value="Aminoácidos">Aminoácidos</ion-select-option>
+          <ion-select-option value="Vitaminas">Vitaminas</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-button expand="block" type="submit" [disabled]="!productForm.valid">
+        Guardar Producto
+      </ion-button>
+    </form>
+  </ion-content>
