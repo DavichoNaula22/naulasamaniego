@@ -1,0 +1,7 @@
+{
+  "name": "Pibcho",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
